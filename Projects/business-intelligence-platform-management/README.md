@@ -1,8 +1,8 @@
 # 📊 Business Intelligence Platform Management
 
 <p align="left">
-  ↩️ <a href="../../README.md"><strong>Back to Portfolio Home</strong></a><br>
-  📁 <a href="../README.md"><strong>Back to Projects Index</strong></a>
+  ↩️ <a href="../../"><strong>Back to Portfolio Home</strong></a><br>
+  📁 <a href="../"><strong>Back to Projects Index</strong></a>
 </p>
 
 ---

@@ -1,8 +1,8 @@
 # 📁 Secure File Transfer Platform Operations
 
 <p align="left">
-  ↩️ <a href="../README.md"><strong>Back to Enterprise Security Architecture</strong></a><br>
-  📁 <a href="../../README.md"><strong>Back to Projects Index</strong></a>
+  ↩️ <a href="../"><strong>Back to Enterprise Security Architecture</strong></a><br>
+  📁 <a href="../../"><strong>Back to Projects Index</strong></a>
 </p>
 
 ## Overview

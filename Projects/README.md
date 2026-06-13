@@ -1,7 +1,7 @@
 # Portfolio Project Areas
 
 <p>
-  <strong><a href="../README.md">↩️ Back to Main Portfolio</a></strong>
+  <strong><a href="../">↩️ Back to Main Portfolio</a></strong>
 </p>
 
 ---

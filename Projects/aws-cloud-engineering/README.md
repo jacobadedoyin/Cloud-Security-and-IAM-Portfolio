@@ -30,5 +30,5 @@ A small Python-based serverless API deployed on AWS using CDK, API Gateway, Lamb
 ---
 
 <p>
-  <strong><a href="../README.md">↩️ Back to Project Index</a></strong>
+  <strong><a href="../">↩️ Back to Project Index</a></strong>
 </p>

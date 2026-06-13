@@ -1,9 +1,9 @@
 # 📚 Certification and Lab Evidence
 
 <p>
-  <strong><a href="../../README.md">📁 Back to Projects Index</a></strong>
+  <strong><a href="../../">📁 Back to Projects Index</a></strong>
   <br>
-  <strong><a href="../README.md">↩️ Back to Azure Cloud Engineering Index</a></strong>
+  <strong><a href="../">↩️ Back to Azure Cloud Engineering Index</a></strong>
 </p>
 
 ## Lab Evidence Scope

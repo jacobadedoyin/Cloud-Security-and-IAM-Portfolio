@@ -1,8 +1,8 @@
 # 📊 Monitoring, Operations and Service Visibility
 
 <p align="left">
-  ↩️ <a href="../README.md"><strong>Back to Azure Cloud Engineering Index</strong></a><br>
-  📁 <a href="../../README.md"><strong>Back to Projects Index</strong></a>
+  ↩️ <a href="../"><strong>Back to Azure Cloud Engineering Index</strong></a><br>
+  📁 <a href="../../"><strong>Back to Projects Index</strong></a>
 </p>
 
 ## Project Scope
