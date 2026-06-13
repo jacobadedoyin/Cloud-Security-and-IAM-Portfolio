@@ -25,6 +25,14 @@ A concise view of the main portfolio areas and the evidence each section demonst
   </tr>
   <tr>
     <td width="460" style="white-space: nowrap;">
+      🟧 <strong><a href="aws-cloud-engineering">AWS&nbsp;Cloud&nbsp;Engineering</a></strong>
+    </td>
+    <td>
+      Serverless application architecture, IAM least privilege, Cognito authentication, API Gateway, Lambda, DynamoDB, S3 and CloudFront hosting, monitoring, cost controls, and CI/CD evidence.
+    </td>
+  </tr>
+  <tr>
+    <td width="460" style="white-space: nowrap;">
       🏛️ <strong><a href="enterprise-security-architecture">Enterprise&nbsp;Security&nbsp;Architecture</a></strong>
     </td>
     <td>
