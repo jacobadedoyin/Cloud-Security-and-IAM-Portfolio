@@ -1,14 +1,9 @@
 # ☁️ Azure Cloud Engineering
 
-<p align="center">
-  <img src="../../assets/azure-cloud-engineering/azure-banner.svg" alt="Azure Cloud Engineering banner" width="100%">
-</p>
+![Azure Cloud Engineering banner](../../assets/azure-cloud-engineering/azure-banner.svg)
 
-<p align="left">
-  ↩️ <a href="../../README.md"><strong>Back to Portfolio Home</strong></a><br>
-  📁 <a href="../README.md"><strong>Back to Projects Index</strong></a>
-</p>
-
+[↩️ Back to Portfolio Home](../../README.md)  
+[📁 Back to Projects Index](../README.md)
 ## Azure Engineering Scope
 
 This section demonstrates practical Azure engineering across **cloud operations, identity controls, monitoring, governance, infrastructure security, and automation**.
