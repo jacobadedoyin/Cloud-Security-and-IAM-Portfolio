@@ -39,14 +39,6 @@ A concise view of the main portfolio areas and the evidence each section demonst
       Identity architecture, secure access design, Conditional Access, least privilege, access governance, and control alignment.
     </td>
   </tr>
-  <tr>
-    <td width="460" style="white-space: nowrap;">
-      📊 <strong><a href="business-intelligence-platform-management">Business&nbsp;Intelligence&nbsp;Platform&nbsp;Management</a></strong>
-    </td>
-    <td>
-      Qlik and Tableau access governance, JML lifecycle controls, licence management, stakeholder validation, and support documentation.
-    </td>
-  </tr>
 </table>
 
 ---
