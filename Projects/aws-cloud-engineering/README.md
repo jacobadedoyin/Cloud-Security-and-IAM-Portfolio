@@ -1,12 +1,24 @@
-# AWS Cloud Engineering
+# 🟧 AWS Cloud Engineering
+
+[↩️ Back to Projects Index](../)
+
+---
+
+## Section Overview
 
 This section contains AWS cloud engineering evidence focused on serverless architecture, infrastructure as code, API deployment, managed databases, IAM permissions, and operational logging.
+
+> 🎓 AWS Cloud Practitioner certification currently underway.
+
+---
 
 ## Featured Project
 
 ### [AWS Secure Serverless Notes API](aws-secure-serverless-application)
 
-A small Python-based serverless API deployed on AWS using CDK, API Gateway, Lambda, DynamoDB, IAM, CloudWatch, and CloudFormation.
+A Python-based serverless API deployed on AWS using CDK, API Gateway, Lambda, DynamoDB, IAM, CloudWatch, and CloudFormation.
+
+---
 
 ## Evidence Demonstrated
 
@@ -18,6 +30,8 @@ A small Python-based serverless API deployed on AWS using CDK, API Gateway, Lamb
 - CloudWatch logging and operational evidence
 - Serverless pay-per-use architecture
 
+---
+
 ## Project Areas Covered
 
 - Serverless application deployment
@@ -26,9 +40,3 @@ A small Python-based serverless API deployed on AWS using CDK, API Gateway, Lamb
 - IAM access control
 - Monitoring and logging
 - Cost-aware cloud design
-
----
-
-<p>
-  <strong><a href="../">↩️ Back to Project Index</a></strong>
-</p>
