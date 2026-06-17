@@ -26,13 +26,13 @@ The emphasis is on professional, workplace-aligned delivery rather than generic 
   </tr>
 
   <tr>
-    <td align="left" width="360">
-      ⚙️ <strong><a href="infrastructure-as-code-and-cloud-governance">Infrastructure as Code and Cloud Governance</a></strong>
-    </td>
-    <td align="left">
-      Planned evidence area covering Bicep and Terraform deployment patterns, naming and tagging standards, network-aware resource design, reusable infrastructure templates, alert rule configuration, and change-ready cloud operations.
-    </td>
-  </tr>
+  <td align="left" width="360">
+    ⚙️ <strong><a href="infrastructure-as-code-and-cloud-governance">Infrastructure as Code and Cloud Governance</a></strong>
+  </td>
+  <td align="left">
+    Bicep module library and Azure Policy assignments enforcing naming conventions and mandatory tags across a simulated multi-subscription environment. Includes NSG flow logs, Log Analytics integration, and Activity Log alert rules for privileged role assignments.
+  </td>
+</tr>
 
   <tr>
     <td align="left" width="360">
