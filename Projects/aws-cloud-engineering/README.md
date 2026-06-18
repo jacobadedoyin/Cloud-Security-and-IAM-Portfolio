@@ -12,29 +12,38 @@ This section contains AWS cloud engineering evidence focused on serverless archi
 
 ---
 
+
 ## Projects
 
 <table>
   <tr>
-    <th align="left" width="360">Project</th>
-    <th align="left">Skills Demonstrated</th>
+    <th align="left" width="320">Project</th>
+    <th align="left">Engineering Capability Demonstrated</th>
+    <th align="left">Skills</th>
   </tr>
   <tr>
-    <td align="left" width="360">
+    <td align="left" width="320">
       🟧 <strong><a href="aws-secure-serverless-application">AWS Secure Serverless Notes API</a></strong>
     </td>
     <td align="left">
-      Serverless architecture, AWS CDK infrastructure as code, API Gateway, Lambda, DynamoDB, IAM least privilege, CloudWatch logging, and cost-aware cloud design.
+      Serverless REST API built with AWS CDK deploying API Gateway, Lambda, and DynamoDB with IAM least-privilege execution roles, CloudWatch logging, and cost-aware architecture decisions enforced at the infrastructure layer.
+    </td>
+    <td align="left">
+      <code>AWS CDK</code> <code>Lambda</code> <code>API Gateway</code> <code>DynamoDB</code> <code>IAM</code> <code>CloudWatch</code>
     </td>
   </tr>
   <tr>
-    <td align="left" width="360">
+    <td align="left" width="320">
       🔐 <strong><a href="aws-cognito-authentication">AWS Cognito Authentication</a></strong>
     </td>
     <td align="left">
-      Cognito User Pool, Identity Pool, federated identity trust, API Gateway authorizer, token-based authentication, and IAM role assignment for authenticated users.
+      Token-based authentication layer using Cognito User Pool and Identity Pool with federated identity trust, API Gateway Lambda authorizer, and IAM role assignment scoped to authenticated users.
+    </td>
+    <td align="left">
+      <code>Cognito</code> <code>API Gateway</code> <code>IAM</code> <code>OAuth 2.0</code> <code>JWT</code> <code>Lambda</code>
     </td>
   </tr>
+</table>
 </table>
 
 ---
