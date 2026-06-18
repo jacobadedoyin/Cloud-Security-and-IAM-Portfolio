@@ -27,7 +27,7 @@ Financial Data Access · MFA Architecture · Secure File Transfer · Vulnerabili
 
 ## Technical Skills Demonstrated
 
-![Technical Skills overview](assets/portfolio/technical-skills.png)
+[View Technical Skills Dashboard](assets/portfolio/technical-skills.html)
 
 ---
 
