@@ -5,70 +5,116 @@
   📁 <a href="../../"><strong>Back to Projects Index</strong></a>
 </p>
 
-## Project Scope
+## What Was Built
 
-This project demonstrates Azure infrastructure-as-code and cloud governance capability using **Bicep, Terraform, deployment standards, naming and tagging controls, network-aware resource design, and reusable governance patterns**.
+A production Azure environment deployed entirely via Bicep modules and Azure CLI. Every resource was defined as code, version-controlled, and deployed without a single portal click. Resources follow a consistent naming convention and mandatory tagging standard, and all observability is wired into a central Log Analytics workspace.
 
-The focus is on showing how Azure resources can be deployed, standardised, documented, and improved in a controlled engineering environment.
+This is the kind of baseline a cloud engineer would build before handing an environment to an operations team: repeatable, documented, and auditable from day one.
+
+---
+
+![Four resources confirmed deployed across storage, networking, monitoring, and alerting — all via a single CLI command, all showing Succeeded status in UK South.](../../../assets/azure-cloud-engineering/infrastructure-as-code-and-cloud-governance/06-terminal-all-resources-deployed.png)
+*Four resources confirmed deployed across storage, networking, monitoring, and alerting — all via a single CLI command, all showing Succeeded status in UK South.*
+
+---
+
+## Resources Deployed
+
+| Resource | Name | Module |
+|---|---|---|
+| Storage Account | `stcproduks001` | `modules/storage/storage-account.bicep` |
+| Log Analytics Workspace | `law-core-prod-uks-001` | `modules/monitoring/log-analytics.bicep` |
+| Network Security Group | `nsg-core-prod-uks-001` | `modules/networking/nsg.bicep` |
+| Alert Rule | `alert-privileged-role-assignment-prod` | `modules/monitoring/alert-rule.bicep` |
+
+All resources deployed to `rg-core-prod-uks-001` in UK South.
+
+---
+
+## Project Structure
+
+```
+azure-landing-zone-lite/
+├── environments/
+│   ├── dev/
+│   └── prod/
+│       ├── alert-rule.bicepparam
+│       ├── log-analytics.bicepparam
+│       ├── nsg.bicepparam
+│       └── storage.bicepparam
+├── modules/
+│   ├── monitoring/
+│   │   ├── alert-rule.bicep
+│   │   └── log-analytics.bicep
+│   ├── networking/
+│   │   └── nsg.bicep
+│   └── storage/
+│       └── storage-account.bicep
+└── policies/
+```
+
+![Modules separated by domain — storage, networking, monitoring — with environment-specific parameter files keeping prod and dev values separate from the reusable module definitions.](../../../assets/azure-cloud-engineering/infrastructure-as-code-and-cloud-governance/05-vscode-folder-structure.png)
+*Modules separated by domain — storage, networking, monitoring — with environment-specific parameter files keeping prod and dev values separate from the reusable module definitions.*
+
+---
+
+## Design Decisions
+
+**Modular Bicep over monolithic templates.** Each resource type lives in its own module with typed parameters and `@description` decorators. Environment-specific values are passed via `.bicepparam` files, keeping modules reusable across dev and prod without duplication.
+
+**Centralised observability.** NSG diagnostic settings point to the Log Analytics workspace, meaning all network flow data is captured in one place. The alert rule queries this workspace for privileged role assignments (`Microsoft.Authorization/roleAssignments/write`) and fires on any successful write — a standard detection pattern for privilege escalation in regulated environments.
+
+**Consistent governance by default.** Every module enforces three tags: `environment`, `managed-by: bicep`, and `project: azure-landing-zone-lite`. This is not a manual step — it is baked into each module so no resource can be deployed untagged regardless of who runs the deployment.
+
+**Storage hardened at the module level.** Public access disabled, minimum TLS 1.2 enforced, and network ACLs set to deny by default. These constraints cannot be bypassed through the portal after deployment because they are defined in code and redeployed idempotently.
+
+---
+
+## Evidence
+
+![All four resources visible in the Azure Portal under rg-core-prod-uks-001, confirming the CLI deployments landed correctly in the right resource group and region.](../../../assets/azure-cloud-engineering/infrastructure-as-code-and-cloud-governance/07-portal-resource-group-all-resources.png)
+*All four resources visible in the Azure Portal under `rg-core-prod-uks-001`, confirming the CLI deployments landed correctly in the right resource group and region.*
+
+---
+
+![Storage account module deployed in 34 seconds via az deployment group create, with Succeeded status and incremental deployment mode confirmed.](../../../assets/azure-cloud-engineering/infrastructure-as-code-and-cloud-governance/09-terminal-storage-deployment-succeeded.png)
+*Storage account module deployed in 34 seconds via `az deployment group create`, with Succeeded status and incremental deployment mode confirmed.*
+
+---
+
+![NSG deployed with diagnostic settings wired to the Log Analytics workspace, enabling network flow capture without any manual configuration after deployment.](../../../assets/azure-cloud-engineering/infrastructure-as-code-and-cloud-governance/08-terminal-nsg-deployment-succeeded.png)
+*NSG deployed with diagnostic settings wired to the Log Analytics workspace, enabling network flow capture without any manual configuration after deployment.*
+
+---
+
+![Alert rule scoped to the Log Analytics workspace, configured to fire on any successful privileged role assignment write — a detection control relevant to SOC and cloud security teams.](../../../assets/azure-cloud-engineering/infrastructure-as-code-and-cloud-governance/02-alert-rule-portal.png)
+*Alert rule scoped to the Log Analytics workspace, configured to fire on any successful privileged role assignment write — a detection control relevant to SOC and cloud security teams.*
+
+---
+
+![Alert rule Bicep module open in VS Code, showing the KQL query, evaluation frequency, severity classification, and scope binding to the Log Analytics workspace resource ID.](../../../assets/azure-cloud-engineering/infrastructure-as-code-and-cloud-governance/04-alert-rule-bicep-vscode.png)
+*Alert rule Bicep module open in VS Code, showing the KQL query, evaluation frequency, severity classification, and scope binding to the Log Analytics workspace resource ID.*
+
+---
 
 ## Skills Demonstrated
 
-| Skill Area | Evidence Demonstrated |
+| Area | Evidence |
 |---|---|
-| **Infrastructure as Code** | Use of Bicep and Terraform to define Azure resources in a repeatable, controlled, and reviewable format. |
-| **Azure Resource Deployment** | Deployment of Azure infrastructure components such as resource groups, virtual machines, networking, monitoring rules, and supporting configuration. |
-| **Cloud Governance** | Use of naming standards, tagging, structure, and documentation to support maintainable Azure environments. |
-| **Network-Aware Design** | Awareness of Azure networking dependencies, including virtual networks, subnets, NSGs, and secure resource placement. |
-| **Operational Readiness** | Configuration of alerting, monitoring links, and resource visibility to support ongoing support and service review. |
-| **Automation Mindset** | Moving away from manual portal-only changes towards reusable deployment patterns and documented engineering processes. |
-| **Change Control Awareness** | Evidence is structured in a way that supports review, version control, controlled updates, and future improvement. |
-| **Security-Aware Engineering** | Infrastructure is presented with consideration for least privilege, secure configuration, segmentation, and governance controls. |
+| Infrastructure as Code | Bicep modules with typed parameters, `@description` decorators, and resource outputs |
+| Cloud Governance | Mandatory tagging enforced at module level — not applied manually after deployment |
+| Observability | NSG diagnostics piped to Log Analytics; alert rule querying for privileged role assignment events |
+| Secure Configuration | Storage hardened by default: no public access, TLS 1.2 minimum, network deny ACL |
+| CLI Deployment | All resources deployed via `az deployment group create` with no portal interaction |
+| Naming Standards | Consistent `{type}-{workload}-{env}-{region}-{instance}` convention applied across all resources |
+| Separation of Concerns | Module definitions kept separate from environment parameter files for reusability |
 
-## Engineering Capability Summary
+## Tools
 
-This project shows the ability to work with Azure infrastructure in a structured and professional way. It demonstrates that cloud resources are not just created manually, but designed, deployed, governed, and documented using repeatable engineering practices.
-
-The evidence supports capability in **Azure administration, infrastructure automation, cloud governance, secure configuration, operational monitoring, and version-controlled delivery**.
-
-## Example Evidence Areas
-
-| Evidence Area | What It Shows |
+| Area | Detail |
 |---|---|
-| **Bicep Templates** | Ability to define Azure resources using declarative infrastructure-as-code. |
-| **Terraform Configuration** | Understanding of reusable infrastructure deployment and cloud state-based provisioning. |
-| **Naming and Tagging Standards** | Awareness of governance practices used to organise and manage cloud estates. |
-| **Network and Resource Design** | Ability to consider placement, connectivity, and security boundaries when deploying infrastructure. |
-| **Alert Rule Configuration** | Understanding of how deployed infrastructure should be monitored and supported after release. |
-| **Documentation** | Ability to explain technical decisions clearly for operational, audit, and portfolio review. |
-
-## Professional Relevance
-
-This project is relevant to Azure Administrator, Cloud Engineer, Infrastructure Engineer, IAM Engineer, and Cloud Security support roles.
-
-It demonstrates practical ability to support cloud environments where infrastructure must be:
-
-- repeatable
-- secure
-- documented
-- governed
-- monitored
-- aligned to operational standards
-- suitable for future review or audit
-
-## Tools and Technologies
-
-| Area | Tools / Concepts |
-|---|---|
-| **Cloud Platform** | Microsoft Azure |
-| **Infrastructure as Code** | Bicep, Terraform |
-| **Identity and Access** | Microsoft Entra ID, Azure RBAC |
-| **Networking** | Virtual networks, subnets, NSGs, resource placement |
-| **Monitoring** | Azure Monitor, alert rules, operational visibility |
-| **Governance** | Naming standards, tagging, documentation, reusable patterns |
-| **Version Control** | GitHub, markdown documentation, structured project evidence |
-
-## Outcome
-
-The outcome of this project is a structured evidence area showing how Azure infrastructure can be deployed and governed using repeatable engineering methods.
-
-It supports the wider portfolio by demonstrating practical cloud engineering skills alongside identity, monitoring, governance, and security-focused work.
+| Cloud Platform | Microsoft Azure (UK South) |
+| Infrastructure as Code | Bicep |
+| CLI | Azure CLI 2.87.0 |
+| Version Control | GitHub |
+| Editor | VS Code with Bicep extension |
