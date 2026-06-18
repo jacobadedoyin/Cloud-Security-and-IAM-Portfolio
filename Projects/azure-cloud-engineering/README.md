@@ -30,21 +30,10 @@ The emphasis is on professional, workplace-aligned delivery rather than generic 
       ⚙️ <strong><a href="infrastructure-as-code-and-cloud-governance">Infrastructure as Code and Cloud Governance</a></strong>
     </td>
     <td align="left">
-      Bicep module library deploying a hardened storage account, Log Analytics workspace, NSG with diagnostic settings, and an alert rule for privileged role assignments. All resources deployed via Azure CLI to UK South with consistent naming conventions and mandatory tagging enforced at the module level.
+      Bicep module library deploying a hardened storage account, Log Analytics workspace, NSG with diagnostic settings, and an alert rule for privileged role assignments. Deployed via GitHub Actions CI/CD pipeline to UK South with consistent naming conventions and mandatory tagging.
     </td>
     <td align="left">
-      <code>Bicep</code> <code>Azure CLI</code> <code>ARM</code> <code>NSG</code> <code>Log Analytics</code> <code>Azure Monitor</code> <code>GitHub Actions</code>
-    </td>
-  </tr>
-  <tr>
-    <td align="left" width="320">
-      📊 <strong><a href="monitoring-operations-and-service-visibility">Monitoring, Operations and Service Visibility</a></strong>
-    </td>
-    <td align="left">
-      Completed evidence area covering Azure Monitor, Log Analytics, Azure Monitor Agent, Data Collection Rules, KQL, and Workbooks used to support VM estate visibility, heartbeat monitoring, performance review, troubleshooting, and operational reporting.
-    </td>
-    <td align="left">
-      <code>KQL</code> <code>Azure Monitor</code> <code>AMA</code> <code>DCR</code> <code>DCE</code> <code>Log Analytics</code> <code>Workbooks</code>
+      <code>Bicep</code> <code>Azure CLI</code> <code>NSG</code> <code>Log Analytics</code> <code>GitHub Actions</code>
     </td>
   </tr>
 </table>
