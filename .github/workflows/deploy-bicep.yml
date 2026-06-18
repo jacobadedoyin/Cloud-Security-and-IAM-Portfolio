@@ -19,6 +19,16 @@ jobs:
         with:
           creds: ${{ secrets.AZURE_CREDENTIALS }}
 
+      - name: Preview changes
+        uses: azure/cli@v2
+        with:
+          azcliversion: latest
+          inlineScript: |
+            az deployment group what-if \
+              --resource-group rg-cloud-portfolio \
+              --template-file Projects/azure-cloud-engineering/infrastructure-as-code-and-cloud-governance/bicep/main.bicep \
+              --parameters Projects/azure-cloud-engineering/infrastructure-as-code-and-cloud-governance/bicep/parameters.json
+
       - name: Deploy Bicep modules
         uses: azure/cli@v2
         with:
@@ -26,5 +36,7 @@ jobs:
           inlineScript: |
             az deployment group create \
               --resource-group rg-cloud-portfolio \
-              --template-file Projects/azure-cloud-engineering/infrastructure-as-code-and-cloud-governance/bicep/main.bicep \
-              --parameters Projects/azure-cloud-engineering/infrastructure-as-code-and-cloud-governance/bicep/parameters.json
+              --template-file Projects/azure-cloud-engineering/infrastructure-as-code-and-cloud-governance/bic
+
+
+
