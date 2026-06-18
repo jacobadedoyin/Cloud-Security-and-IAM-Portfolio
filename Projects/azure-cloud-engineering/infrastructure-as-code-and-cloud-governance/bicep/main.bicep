@@ -16,6 +16,9 @@ param nsgName string
 @description('Alert rule name')
 param alertRuleName string
 
+@allowed([30, 60, 90, 120, 180, 270, 365])
+param retentionInDays int = 30
+
 module storage 'modules/storage/storage-account.bicep' = {
   name: 'storage-deployment'
   params: {
@@ -31,6 +34,7 @@ module logAnalytics 'modules/monitoring/log-analytics.bicep' = {
     workspaceName: workspaceName
     location: location
     environment: environment
+    retentionInDays: retentionInDays
   }
 }
 
