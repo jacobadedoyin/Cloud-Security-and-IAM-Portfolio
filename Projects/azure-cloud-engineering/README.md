@@ -64,5 +64,45 @@ All three projects are live deployments on a personal Azure subscription with fu
 
 ## Supporting Evidence
 
-🎓 **[Certification and Lab Evidence](certification-and-lab-evidence)**  
-AZ-900 · SC-900 · AZ-104 preparation · Azure labs
+🎓 **[Certification and Lab Evidence](certification-and-lab-evidence)**
+
+<table>
+  <tr>
+    <th align="left" width="160">Certification</th>
+    <th align="left">Focus Area</th>
+    <th align="left">Lab Evidence</th>
+  </tr>
+  <tr>
+    <td align="left" width="160">
+      <strong>AZ-900</strong><br>Azure Fundamentals
+    </td>
+    <td align="left">
+      Core cloud concepts, Azure services, pricing, and governance fundamentals.
+    </td>
+    <td align="left">
+      <a href="../azure-identity-security-foundations">azure-identity-security-foundations</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="left" width="160">
+      <strong>AZ-104</strong><br>Azure Administrator
+    </td>
+    <td align="left">
+      Identity, governance, storage, compute, virtual networking, and monitoring administration.
+    </td>
+    <td align="left">
+      <a href="../azure-identity-governance-engineering">azure-identity-governance-engineering</a>
+    </td>
+  </tr>
+  <tr>
+    <td align="left" width="160">
+      <strong>SC-900</strong><br>Security, Compliance & Identity Fundamentals
+    </td>
+    <td align="left">
+      Microsoft Entra ID, Zero Trust principles, compliance, and security concepts.
+    </td>
+    <td align="left">
+      No labs (conceptual coverage only)
+    </td>
+  </tr>
+</table>
