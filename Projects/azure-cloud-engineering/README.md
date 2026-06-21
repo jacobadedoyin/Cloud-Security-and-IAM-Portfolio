@@ -83,10 +83,10 @@ All three projects are live deployments on a personal Azure subscription with fu
       Hands-on administration: identity and governance, storage, compute, virtual networking, and monitoring at production scale.
     </td>
     <td align="left">
-      <a href="certificates/az104-certificate.pdf">View certificate</a>
+      <a href="certification-and-lab-evidence/certificates/AZ-104.pdf">View certificate</a>
     </td>
     <td align="left">
-      <a href="azure-identity-governance-engineering">azure-identity-governance-engineering</a>
+      <a href="certification-and-lab-evidence/azure-identity-governance-engineering">azure-identity-governance-engineering</a>
     </td>
   </tr>
   <tr>
@@ -100,10 +100,10 @@ All three projects are live deployments on a personal Azure subscription with fu
       Core cloud concepts, Azure service models, pricing, and governance — the foundation underpinning the AZ-104 work above.
     </td>
     <td align="left">
-      <a href="certificates/az900-certificate.pdf">View certificate</a>
+      <a href="certification-and-lab-evidence/certificates/az900-certificate.pdf">View certificate</a>
     </td>
     <td align="left">
-      <a href="azure-identity-security-foundations">azure-identity-security-foundations</a>
+      <a href="certification-and-lab-evidence/azure-identity-security-foundations">azure-identity-security-foundations</a>
     </td>
   </tr>
   <tr>
@@ -117,10 +117,10 @@ All three projects are live deployments on a personal Azure subscription with fu
       Microsoft Entra ID, Zero Trust principles, and compliance fundamentals — security context for the identity governance work in this portfolio.
     </td>
     <td align="left">
-      <a href="certificates/sc900-certificate.pdf">View certificate</a>
+      <a href="certification-and-lab-evidence/certificates/sc900-certificate.pdf">View certificate</a>
     </td>
     <td align="left">
-      <a href="azure-identity-security-foundations">azure-identity-security-foundations</a>
+      <a href="certification-and-lab-evidence/azure-identity-security-foundations">azure-identity-security-foundations</a>
     </td>
   </tr>
 </table>
