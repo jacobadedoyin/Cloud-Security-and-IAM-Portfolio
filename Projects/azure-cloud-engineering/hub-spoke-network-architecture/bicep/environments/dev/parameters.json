@@ -1,0 +1,13 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "environment": { "value": "dev" },
+    "hubVnetName": { "value": "vnet-hub-portfolio-uks-001" },
+    "spoke1VnetName": { "value": "vnet-spoke1-portfolio-uks-001" },
+    "spoke2VnetName": { "value": "vnet-spoke2-portfolio-uks-001" },
+    "nsgName": { "value": "nsg-spoke-portfolio-uks-001" },
+    "privateDnsZoneName": { "value": "privatelink.blob.core.windows.net" },
+    "storageAccountName": { "value": "stspokepfoluks001" }
+  }
+}

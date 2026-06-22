@@ -1,7 +1,7 @@
 # 🔐 MFA Application Deployment and Operations
 
 <p align="left">
-  ↩️ <a href="../"><strong>Back to Enterprise Security Architecture Index</strong></a><br>
+  ↩️ <a href="../"><strong>Back to Identity & Access Governance Index</strong></a><br>
   📁 <a href="../../"><strong>Back to Projects Index</strong></a>
 </p>
 

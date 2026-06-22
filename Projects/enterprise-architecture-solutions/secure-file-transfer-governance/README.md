@@ -1,7 +1,7 @@
 # 📁 Secure File Transfer Platform Operations
 
 <p align="left">
-  ↩️ <a href="../"><strong>Back to Enterprise Security Architecture</strong></a><br>
+  ↩️ <a href="../"><strong>Back to Identity & Access Governance</strong></a><br>
   📁 <a href="../../"><strong>Back to Projects Index</strong></a>
 </p>
 

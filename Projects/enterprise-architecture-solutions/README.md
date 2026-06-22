@@ -1,4 +1,4 @@
-# 🏛️ Enterprise Architecture Solutions
+# 🏛️ Identity & Access Governance
 
 [↩️ Back to Portfolio Home](../../)  
 [📁 Back to Projects Index](../)
@@ -34,7 +34,7 @@ The projects show practical ownership of architecture and security controls acro
   </tr>
   <tr>
     <td width="310" valign="top">
-      🔐 <strong><a href="./mfa-and-authentication-architecture/">MFA Authentication Architecture</a></strong>
+      🔐 <strong><a href="./mfa-and-authentication-architecture/">MFA Authentication Support</a></strong>
     </td>
     <td valign="top">
       MFA deployment and authentication support, including onboarding, enrolment validation, sign-in triage, exception handling, stakeholder communication, and support documentation.
@@ -45,7 +45,7 @@ The projects show practical ownership of architecture and security controls acro
   </tr>
   <tr>
     <td width="310" valign="top">
-      📁 <strong><a href="./secure-file-transfer-governance/">Secure File Transfer Architecture</a></strong>
+      📁 <strong><a href="./secure-file-transfer-governance/">Secure File Transfer Governance</a></strong>
     </td>
     <td valign="top">
       Secure file transfer governance, including folder permissions, access reviews, operational checks, service-owner coordination, configuration evidence, and support documentation.
