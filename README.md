@@ -20,7 +20,7 @@ Bicep · GitHub Actions · VNet · NSG · Private Endpoints · Key Vault · Mana
 🟧 **[AWS Cloud Engineering](Projects/aws-cloud-engineering)**  
 Serverless architecture · IAM · Cognito · API Gateway · Lambda · DynamoDB · S3 · CloudFront · CloudWatch · CDK
 
-🏛️ **[Identity & Access Governance](Projects/enterprise-architecture-solutions)**  
+🏛️ **[Identity & Access Governance](Projects/identity-access-governance)**  
 Financial Data Access · MFA Authentication Support · Secure File Transfer · Vulnerability Management · BI Platform Governance
 
 ---
