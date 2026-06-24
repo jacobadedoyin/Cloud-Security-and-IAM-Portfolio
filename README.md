@@ -25,11 +25,6 @@ Financial Data Access · MFA Authentication Support · Secure File Transfer · V
 
 ---
 
-## Technical Skills Demonstrated
-
-[View Technical Skills Dashboard](assets/portfolio/technical-skills.html)
-
----
 
 ## Evidence Approach
 
